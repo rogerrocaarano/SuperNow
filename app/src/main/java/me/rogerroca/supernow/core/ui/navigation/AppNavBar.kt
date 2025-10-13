@@ -7,11 +7,9 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 
 @Composable
@@ -19,15 +17,23 @@ fun AppNavBar(
     navController: NavHostController,
     startDestination: Destination
 ) {
-    var selectedDestination by rememberSaveable { mutableIntStateOf(startDestination.ordinal) }
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
 
     NavigationBar(windowInsets = NavigationBarDefaults.windowInsets) {
         Destination.entries.forEachIndexed { index, destination ->
             NavigationBarItem(
-                selected = selectedDestination == index,
+                selected = currentRoute == destination.route,
                 onClick = {
-                    navController.navigate(route = destination.route)
-                    selectedDestination = index
+                    if (currentRoute != destination.route) {
+                        navController.navigate(route = destination.route) {
+                            popUpTo(navController.graph.startDestinationId) {
+                                saveState = true
+                            }
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                    }
                 },
                 icon = {
                     Icon(
