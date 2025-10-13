@@ -7,10 +7,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
+import me.rogerroca.supernow.core.ui.navigation.AppNavBar
+import me.rogerroca.supernow.core.ui.navigation.AppNavHost
+import me.rogerroca.supernow.core.ui.navigation.Destination
 import me.rogerroca.supernow.core.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,30 +20,35 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            val navController = rememberNavController()
+            val startDestination = Destination.HOME
+
             AppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    bottomBar = {
+                        AppNavBar(
+                            navController = navController,
+                            startDestination = startDestination
+                        )
+                    }
+                ) { paddingValues ->
+                    // add 16.dp padding to the sides
+                    val paddingModifier = Modifier.padding(
+                        top = paddingValues.calculateTopPadding(),
+                        bottom = paddingValues.calculateBottomPadding(),
+                        start = 16.dp,
+                        end = 16.dp
                     )
+
+                    AppNavHost(
+                        navController = navController,
+                        modifier = paddingModifier,
+                        startDestination = startDestination
+                    )
+
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AppTheme {
-        Greeting("Android")
     }
 }
