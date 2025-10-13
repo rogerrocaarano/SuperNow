@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.ui.theme
+package me.rogerroca.supernow.core.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

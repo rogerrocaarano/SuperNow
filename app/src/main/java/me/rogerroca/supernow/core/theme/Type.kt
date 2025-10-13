@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.ui.theme
+package me.rogerroca.supernow.core.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.FontFamily
