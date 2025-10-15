@@ -1,6 +1,8 @@
-package me.rogerroca.supernow.core.ui.theme
+package me.rogerroca.supernow.core.ui.theme.buttons
 
 import androidx.compose.material3.IconButtonColors
+import me.rogerroca.supernow.core.ui.theme.onSecondaryContainerDark
+import me.rogerroca.supernow.core.ui.theme.secondaryContainerLight
 
 val primaryIconButtonColors = IconButtonColors(
     containerColor = secondaryContainerLight,
