@@ -23,6 +23,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
+import coil.compose.AsyncImage
 
 @Composable
 fun MarketCard(
@@ -30,7 +31,7 @@ fun MarketCard(
     name: String,
     address: String? = null,
     score: Int? = null,
-    imageRes: Int,
+    imageUrl: String? = null,
     action: @Composable (() -> Unit)? = null
 ) {
     Card(
@@ -51,8 +52,8 @@ fun MarketCard(
                     .background(onPrimaryLight),
                 contentAlignment = Alignment.Center
             ) {
-                Image(
-                    painter = painterResource(id = imageRes),
+                AsyncImage(
+                    model = imageUrl,
                     contentDescription = "Imagen del local",
                     contentScale = ContentScale.Fit,
                     modifier = Modifier.fillMaxSize()
@@ -113,45 +114,45 @@ fun MarketCard(
 fun MarketCardPreview() {
     Column(modifier = Modifier.padding(16.dp)) {
 
-        var isFavSofia by remember { mutableStateOf(true) }
-        var isFavMainter by remember { mutableStateOf(false) }
-        var isFav3B by remember { mutableStateOf(false) }
+        var isFavA by remember { mutableStateOf(true) }
+        var isFavB by remember { mutableStateOf(false) }
+        var isFavC by remember { mutableStateOf(false) }
 
         MarketCard(
-            name = "Sofía",
-            address = "Calle 1 de Julio",
-            imageRes = R.drawable.marketcard_image_sofia,
+            name = "Local A",
+            address = "Av. Principal #123",
+            imageUrl = "https://via.placeholder.com/150",
             score = 5,
             action = {
                 FavoriteButton(
-                    isFavorite = isFavSofia,
-                    onClick = { isFavSofia = !isFavSofia }
+                    isFavorite = isFavA,
+                    onClick = { isFavA = !isFavA }
                 )
             }
         )
 
         MarketCard(
-            name = "Mainter",
-            address = "Calle 25 de Mayo",
-            imageRes = R.drawable.marketcard_image_mainter,
+            name = "Local B",
+            address = "Calle #45",
+            imageUrl = "https://via.placeholder.com/150",
             score = 4,
             action = {
                 FavoriteButton(
-                    isFavorite = isFavMainter,
-                    onClick = { isFavMainter = !isFavMainter }
+                    isFavorite = isFavB,
+                    onClick = { isFavB = !isFavB }
                 )
             }
         )
 
         MarketCard(
-            name = "Tiendas 3B",
-            address = "Calle 3 de Octubre",
-            imageRes = R.drawable.marketcard_image_tiendas3b,
-            score = 4,
+            name = "Local C",
+            address = "Calle #3",
+            imageUrl = "https://via.placeholder.com/150",
+            score = 3,
             action = {
                 FavoriteButton(
-                    isFavorite = isFav3B,
-                    onClick = { isFav3B = !isFav3B }
+                    isFavorite = isFavC,
+                    onClick = { isFavC = !isFavC }
                 )
             }
         )

@@ -9,6 +9,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -22,10 +23,12 @@ import me.rogerroca.supernow.core.ui.theme.surfaceDimLight
 @Composable
 fun FavoriteButton(
     isFavorite: Boolean,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
-    Box(
-        modifier = Modifier
+    IconButton(
+        onClick = onClick,
+        modifier = modifier
             .size(32.dp)
             .border(
                 width = 1.dp,
@@ -33,8 +36,6 @@ fun FavoriteButton(
                 shape = CircleShape
             )
             .clip(CircleShape)
-            .clickable { onClick() },
-        contentAlignment = Alignment.Center
     ) {
         Icon(
             imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
