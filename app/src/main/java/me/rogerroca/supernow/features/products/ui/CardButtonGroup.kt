@@ -58,7 +58,7 @@ fun CardButtonGroup() {
             onValueChange = { newValue ->
                 // Only accept integer values
                 if (newValue.isEmpty()) {
-                    textValue = ""
+                    textValue = "0"
                     quantity = 0
                 } else {
                     newValue.toIntOrNull()?.let { intValue ->
