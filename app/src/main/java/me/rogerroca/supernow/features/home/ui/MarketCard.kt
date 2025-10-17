@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.core.ui.components
+package me.rogerroca.supernow.features.home.ui
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,6 +31,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import me.rogerroca.supernow.R
+import me.rogerroca.supernow.core.ui.components.FavoriteButton
 import me.rogerroca.supernow.core.ui.theme.AppTypography
 import me.rogerroca.supernow.core.ui.theme.onPrimaryLight
 
