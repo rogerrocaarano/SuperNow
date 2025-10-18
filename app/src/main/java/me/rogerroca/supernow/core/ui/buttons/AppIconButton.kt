@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.core.ui.components.buttons
+package me.rogerroca.supernow.core.ui.buttons
 
 import androidx.compose.material3.FilledIconButton
 import androidx.compose.material3.Icon

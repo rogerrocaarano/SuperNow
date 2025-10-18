@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.core.ui.components.textfields
+package me.rogerroca.supernow.core.ui.textfields
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
