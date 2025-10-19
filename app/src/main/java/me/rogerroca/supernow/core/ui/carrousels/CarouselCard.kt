@@ -22,11 +22,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
 
+data class CarrouselCardModel(
+    val id: String,
+    val imageUrl: String,
+    val text: String? = null,
+)
+
 @Composable
 fun CarouselCard(
     modifier: Modifier = Modifier,
-    imageUrl: String,
-    text: String? = null,
+    model: CarrouselCardModel,
     onClick: (() -> Unit)? = null
 ) {
     Card(
@@ -35,8 +40,8 @@ fun CarouselCard(
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             SubcomposeAsyncImage(
-                model = imageUrl,
-                contentDescription = text ?: "Carousel Card Image",
+                model = model.imageUrl,
+                contentDescription = model.text ?: "Carousel Card Image",
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop,
                 loading = {
@@ -57,7 +62,7 @@ fun CarouselCard(
                     )
                 }
             )
-            text?.let {
+            model.text?.let {
                 CardTextOverlay(text = it)
             }
         }
@@ -71,7 +76,7 @@ fun BoxScope.CardTextOverlay(
     text: String
 ) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .align(Alignment.BottomStart)
             .background(
@@ -97,8 +102,12 @@ fun BoxScope.CardTextOverlay(
 fun CarouselCardPreview() {
     MaterialTheme {
         CarouselCard(
-            modifier = Modifier.height(128.dp),
-            imageUrl = "https://picsum.photos/400/300?random=1"
+            modifier = Modifier.height(180.dp),
+            model = CarrouselCardModel(
+                id = "1",
+                imageUrl = "https://picsum.photos/400/300?random=1",
+                text = "Lorem"
+            )
         )
     }
 }
