@@ -22,12 +22,26 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
 
+/**
+ * Modelo de datos para una tarjeta del carrusel.
+ * @param id Identificador único de la tarjeta.
+ * @param imageUrl URL de la imagen a mostrar.
+ * @param text Texto opcional a mostrar sobre la imagen.
+ */
 data class CarouselCardModel(
     val id: String,
     val imageUrl: String,
     val text: String? = null,
 )
 
+/**
+ * Componente que representa una tarjeta individual dentro de un carrusel.
+ * Muestra una imagen cargada de forma asíncrona y un texto opcional superpuesto.
+ * Si la imagen no está disponible, rellena el contenedor con un color sólido.
+ * @param modifier Modificador para la tarjeta.
+ * @param model Modelo de datos de la tarjeta.
+ * @param onClick Callback opcional para manejar el click en la tarjeta.
+ */
 @Composable
 fun CarouselCard(
     modifier: Modifier = Modifier,
@@ -70,6 +84,11 @@ fun CarouselCard(
     }
 }
 
+/**
+ * Componente para mostrar una superposición de texto en la parte inferior de la tarjeta del carrusel.
+ * @param modifier Modificador para la caja de texto.
+ * @param text Texto a mostrar sobre la imagen.
+ */
 @Composable
 fun BoxScope.CardTextOverlay(
     modifier: Modifier = Modifier,
@@ -97,6 +116,9 @@ fun BoxScope.CardTextOverlay(
     }
 }
 
+/**
+ * Vista previa del componente CarouselCard con datos de ejemplo.
+ */
 @Preview
 @Composable
 fun CarouselCardPreview() {

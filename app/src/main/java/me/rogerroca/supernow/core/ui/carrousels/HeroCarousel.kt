@@ -11,6 +11,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
+/**
+ * Carrusel horizontal de tarjetas tipo "Hero".
+ * Utiliza HorizontalMultiBrowseCarousel para mostrar una lista de tarjetas con imágenes y texto opcional.
+ * Las imágenes se muestran con esquinas redondeadas y altura configurable.
+ * @param modifier Modificador para el contenedor del carrusel.
+ * @param cards Lista de modelos de tarjeta a mostrar en el carrusel.
+ * @param height Altura de cada tarjeta.
+ * @param preferredItemWidth Ancho preferido de cada tarjeta.
+ * @param itemSpacing Espaciado entre tarjetas.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HeroCarousel(
@@ -42,6 +52,9 @@ fun HeroCarousel(
     }
 }
 
+/**
+ * Vista previa del componente HeroCarousel con datos de ejemplo.
+ */
 @Preview
 @Composable
 fun HeroCarouselPreview() {
