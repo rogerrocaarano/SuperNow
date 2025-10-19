@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun HeroCarousel(
     modifier: Modifier = Modifier,
-    cards: List<CarrouselCardModel>,
+    cards: List<CarouselCardModel>,
     height: androidx.compose.ui.unit.Dp = 200.dp,
     preferredItemWidth: androidx.compose.ui.unit.Dp = 300.dp,
     itemSpacing: androidx.compose.ui.unit.Dp = 8.dp
@@ -46,17 +46,17 @@ fun HeroCarousel(
 @Composable
 fun HeroCarouselPreview() {
     val sampleCards = listOf(
-        CarrouselCardModel(
+        CarouselCardModel(
             id = "1",
             imageUrl = "https://via.placeholder.com/600x400.png?text=Hero+1",
             text = "Hero 1"
         ),
-        CarrouselCardModel(
+        CarouselCardModel(
             id = "2",
             imageUrl = "https://via.placeholder.com/600x400.png?text=Hero+2",
             text = "Hero 2"
         ),
-        CarrouselCardModel(
+        CarouselCardModel(
             id = "3",
             imageUrl = "https://via.placeholder.com/600x400.png?text=Hero+3",
             text = "Hero 3"

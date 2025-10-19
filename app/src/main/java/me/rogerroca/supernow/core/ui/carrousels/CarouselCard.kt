@@ -22,7 +22,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
 
-data class CarrouselCardModel(
+data class CarouselCardModel(
     val id: String,
     val imageUrl: String,
     val text: String? = null,
@@ -31,7 +31,7 @@ data class CarrouselCardModel(
 @Composable
 fun CarouselCard(
     modifier: Modifier = Modifier,
-    model: CarrouselCardModel,
+    model: CarouselCardModel,
     onClick: (() -> Unit)? = null
 ) {
     Card(
@@ -103,7 +103,7 @@ fun CarouselCardPreview() {
     MaterialTheme {
         CarouselCard(
             modifier = Modifier.height(180.dp),
-            model = CarrouselCardModel(
+            model = CarouselCardModel(
                 id = "1",
                 imageUrl = "https://picsum.photos/400/300?random=1",
                 text = "Lorem"
