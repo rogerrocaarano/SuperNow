@@ -6,17 +6,15 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
-import me.rogerroca.supernow.core.ui.theme.AppTheme
-import me.rogerroca.supernow.core.ui.theme.primaryLight
-import me.rogerroca.supernow.core.ui.theme.surfaceLight
 
 @Composable
 fun CarouselCard(
@@ -39,7 +37,7 @@ fun CarouselCard(
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
-                            .background(surfaceLight),
+                            .background(colorScheme.surface),
                         contentAlignment = Alignment.Center
                     ) {
                         // Placeholder mientras carga
@@ -49,9 +47,10 @@ fun CarouselCard(
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
-                            .background(primaryLight)
+                            .background(colorScheme.primaryContainer)
                     )
-                })
+                }
+            )
         }
     }
 }
@@ -59,7 +58,7 @@ fun CarouselCard(
 @Preview
 @Composable
 fun CarouselCardPreview() {
-    AppTheme {
+    MaterialTheme {
         CarouselCard(
             modifier = Modifier.height(128.dp),
             imageUrl = "https://picsum.photos/400/300?random=1"
