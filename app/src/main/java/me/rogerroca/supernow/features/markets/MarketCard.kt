@@ -20,9 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import me.rogerroca.supernow.core.ui.buttons.FavoriteButton
-import me.rogerroca.supernow.core.ui.cards.MarketCardClass
-import me.rogerroca.supernow.core.ui.cards.MarketImageBox
-import me.rogerroca.supernow.core.ui.cards.MarketInfoColumn
+import me.rogerroca.supernow.core.ui.misc.ImageBox
 
 @Composable
 fun MarketCard(
@@ -38,10 +36,9 @@ fun MarketCard(
         shape = RoundedCornerShape(12.dp)
     ) {
         Row(
-            modifier = Modifier.fillMaxSize(),
-            verticalAlignment = Alignment.CenterVertically
+            modifier = Modifier.fillMaxSize(), verticalAlignment = Alignment.CenterVertically
         ) {
-            MarketImageBox(imageUrl = market.imageUrl)
+            ImageBox(imageUrl = model.imageUrl)
 
             Row(
                 modifier = Modifier
@@ -51,10 +48,10 @@ fun MarketCard(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                MarketInfoColumn(
-                    name = market.name,
-                    address = market.address,
-                    score = market.score,
+                InfoColumn(
+                    name = model.name,
+                    address = model.address,
+                    score = model.score,
                     modifier = Modifier.weight(1f)
                 )
 
@@ -95,34 +92,22 @@ fun MarketCardPreview() {
         )
 
         MarketCard(
-            market = marketA,
-            action = {
+            model = marketA, action = {
                 FavoriteButton(
-                    isFavorite = isFavA,
-                    onClick = { isFavA = !isFavA }
-                )
-            }
-        )
+                    isFavorite = isFavA, onClick = { isFavA = !isFavA })
+            })
 
         MarketCard(
-            market = marketB,
-            action = {
+            model = marketB, action = {
                 FavoriteButton(
-                    isFavorite = isFavB,
-                    onClick = { isFavB = !isFavB }
-                )
-            }
-        )
+                    isFavorite = isFavB, onClick = { isFavB = !isFavB })
+            })
 
         MarketCard(
-            market = marketC,
-            action = {
+            model = marketC, action = {
                 FavoriteButton(
-                    isFavorite = isFavC,
-                    onClick = { isFavC = !isFavC }
-                )
-            }
-        )
+                    isFavorite = isFavC, onClick = { isFavC = !isFavC })
+            })
     }
 }
 
