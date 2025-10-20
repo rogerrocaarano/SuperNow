@@ -22,9 +22,9 @@ import me.rogerroca.supernow.core.ui.theme.AppTypography
 @Composable
 fun InfoColumn(
     name: String,
+    modifier: Modifier = Modifier,
     address: String? = null,
-    score: Int? = null,
-    modifier: Modifier = Modifier
+    score: Int? = null
 ) {
     Column(
         verticalArrangement = Arrangement.Center,
