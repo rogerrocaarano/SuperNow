@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.core.ui.cards
+package me.rogerroca.supernow.features.markets
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,12 +17,10 @@ import androidx.compose.ui.unit.dp
 import me.rogerroca.supernow.R
 import me.rogerroca.supernow.core.ui.theme.AppTypography
 
-
-
 @Composable
-fun MarketInfoColumn(
-    name: String,
+fun InfoColumn(
     modifier: Modifier = Modifier,
+    name: String,
     address: String? = null,
     score: Int? = null
 ) {
@@ -30,32 +28,38 @@ fun MarketInfoColumn(
         verticalArrangement = Arrangement.Center,
         modifier = modifier
     ) {
-        if (score != null) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = score.toString(),
-                    style = AppTypography.labelSmall
-                )
-                Spacer(modifier = Modifier.width(4.dp))
-
-                Icon(
-                    imageVector = ImageVector.vectorResource(R.drawable.icon_material_star),
-                    contentDescription = "Calificación",
-                    modifier = Modifier.size(12.dp)
-                )
-            }
-        }
+        score?.let { RatingScore(score = it) }
 
         Text(
             text = name,
             style = AppTypography.titleLarge
         )
 
-        if (address != null) {
+        address?.let {
             Text(
                 text = address,
                 style = AppTypography.bodySmall
             )
         }
+    }
+}
+
+@Composable
+fun RatingScore(
+    modifier: Modifier = Modifier,
+    score: Int
+) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Text(
+            text = score.toString(),
+            style = AppTypography.labelSmall
+        )
+        Spacer(modifier = Modifier.width(4.dp))
+
+        Icon(
+            imageVector = ImageVector.vectorResource(R.drawable.icon_material_star),
+            contentDescription = "Icono de calificación",
+            modifier = Modifier.size(12.dp)
+        )
     }
 }
