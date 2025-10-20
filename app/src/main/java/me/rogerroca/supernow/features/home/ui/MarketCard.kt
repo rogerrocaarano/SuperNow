@@ -18,9 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import me.rogerroca.supernow.core.ui.components.FavoriteButton
-import me.rogerroca.supernow.core.ui.components.ImageBox
-import me.rogerroca.supernow.core.ui.components.InfoColumn
+import me.rogerroca.supernow.core.ui.buttons.FavoriteButton
 import me.rogerroca.supernow.core.ui.components.MarketCardClass
 import me.rogerroca.supernow.core.ui.components.MarketImageBox
 import me.rogerroca.supernow.core.ui.components.MarketInfoColumn
