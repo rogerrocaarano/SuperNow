@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.core.ui.components
+package me.rogerroca.supernow.core.ui.cards
 
 data class MarketCardClass(
     val name: String,

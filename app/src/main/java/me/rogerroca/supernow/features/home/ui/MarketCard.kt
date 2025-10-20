@@ -19,9 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import me.rogerroca.supernow.core.ui.buttons.FavoriteButton
-import me.rogerroca.supernow.core.ui.components.MarketCardClass
-import me.rogerroca.supernow.core.ui.components.MarketImageBox
-import me.rogerroca.supernow.core.ui.components.MarketInfoColumn
+import me.rogerroca.supernow.core.ui.cards.MarketCardClass
+import me.rogerroca.supernow.core.ui.cards.MarketImageBox
+import me.rogerroca.supernow.core.ui.cards.MarketInfoColumn
 
 @Composable
 fun MarketCard(
