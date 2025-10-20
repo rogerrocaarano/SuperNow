@@ -52,6 +52,11 @@ fun HeroCarousel(
     }
 }
 
+enum class CarouselType {
+    HERO,
+    STANDARD
+}
+
 /**
  * Vista previa del componente HeroCarousel con datos de ejemplo.
  */
