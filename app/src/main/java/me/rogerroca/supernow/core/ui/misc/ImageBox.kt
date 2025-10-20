@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.core.ui.cards
+package me.rogerroca.supernow.core.ui.misc
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,8 +15,8 @@ import me.rogerroca.supernow.core.ui.theme.onPrimaryLight
 
 @Composable
 fun ImageBox(
-    imageUrl: String?,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    imageUrl: String?
 ) {
     Box(
         modifier = modifier
