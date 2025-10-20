@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HeroCarousel(
+fun Carousel(
     modifier: Modifier = Modifier,
     cards: List<CarouselCardModel>,
     height: androidx.compose.ui.unit.Dp = 200.dp,
@@ -62,7 +62,7 @@ enum class CarouselType {
  */
 @Preview
 @Composable
-fun HeroCarouselPreview() {
+fun CarouselPreview() {
     val sampleCards = listOf(
         CarouselCardModel(
             id = "1",
@@ -81,7 +81,7 @@ fun HeroCarouselPreview() {
         )
     )
 
-    HeroCarousel(
+    Carousel(
         cards = sampleCards,
         height = 180.dp,
         preferredItemWidth = 280.dp,
