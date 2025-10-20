@@ -22,6 +22,8 @@ import me.rogerroca.supernow.core.ui.components.FavoriteButton
 import me.rogerroca.supernow.core.ui.components.ImageBox
 import me.rogerroca.supernow.core.ui.components.InfoColumn
 import me.rogerroca.supernow.core.ui.components.MarketCardClass
+import me.rogerroca.supernow.core.ui.components.MarketImageBox
+import me.rogerroca.supernow.core.ui.components.MarketInfoColumn
 
 @Composable
 fun MarketCard(
@@ -40,7 +42,7 @@ fun MarketCard(
             modifier = Modifier.fillMaxSize(),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            ImageBox(imageUrl = market.imageUrl)
+            MarketImageBox(imageUrl = market.imageUrl)
 
             Row(
                 modifier = Modifier
@@ -50,7 +52,7 @@ fun MarketCard(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                InfoColumn(
+                MarketInfoColumn(
                     name = market.name,
                     address = market.address,
                     score = market.score,
