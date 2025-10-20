@@ -8,6 +8,7 @@ import androidx.compose.material3.carousel.HorizontalMultiBrowseCarousel
 import androidx.compose.material3.carousel.rememberCarouselState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
@@ -18,19 +19,25 @@ import androidx.compose.ui.unit.dp
  * @param modifier Modificador para el contenedor del carrusel.
  * @param cards Lista de modelos de tarjeta a mostrar en el carrusel.
  * @param height Altura de cada tarjeta.
- * @param preferredItemWidth Ancho preferido de cada tarjeta.
+ * @param type Tipo de carrusel (HERO o STANDARD) que determina el ancho preferido de las tarjetas.
  * @param itemSpacing Espaciado entre tarjetas.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HeroCarousel(
+fun Carousel(
     modifier: Modifier = Modifier,
     cards: List<CarouselCardModel>,
     height: androidx.compose.ui.unit.Dp = 200.dp,
-    preferredItemWidth: androidx.compose.ui.unit.Dp = 300.dp,
+    type: CarouselType = CarouselType.STANDARD,
     itemSpacing: androidx.compose.ui.unit.Dp = 8.dp
 ) {
     val carouselState = rememberCarouselState { cards.size }
+
+    val screenWidth = LocalConfiguration.current.screenWidthDp.dp
+    val preferredItemWidth: androidx.compose.ui.unit.Dp = when (type) {
+        CarouselType.HERO -> screenWidth * 0.85f
+        CarouselType.STANDARD -> screenWidth * 0.5f
+    }
 
     HorizontalMultiBrowseCarousel(
         modifier = modifier
@@ -52,12 +59,17 @@ fun HeroCarousel(
     }
 }
 
+enum class CarouselType {
+    HERO,
+    STANDARD
+}
+
 /**
  * Vista previa del componente HeroCarousel con datos de ejemplo.
  */
 @Preview
 @Composable
-fun HeroCarouselPreview() {
+fun CarouselPreview() {
     val sampleCards = listOf(
         CarouselCardModel(
             id = "1",
@@ -76,10 +88,10 @@ fun HeroCarouselPreview() {
         )
     )
 
-    HeroCarousel(
+    Carousel(
         cards = sampleCards,
         height = 180.dp,
-        preferredItemWidth = 280.dp,
+        type = CarouselType.STANDARD,
         itemSpacing = 12.dp
     )
 }
