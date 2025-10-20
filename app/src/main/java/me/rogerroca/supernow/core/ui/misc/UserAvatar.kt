@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.core.ui.components
+package me.rogerroca.supernow.core.ui.misc
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
