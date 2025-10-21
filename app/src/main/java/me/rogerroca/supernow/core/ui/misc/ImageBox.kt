@@ -3,7 +3,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
@@ -21,7 +20,6 @@ import me.rogerroca.supernow.core.ui.theme.primaryLight
 fun ImageBox(
     modifier: Modifier = Modifier,
     imageUrl: String?,
-    imageSize: Dp = 56.dp,
     backgroundColor: androidx.compose.ui.graphics.Color = primaryLight,
     backgroundBrush: Brush? = null
 ) {
