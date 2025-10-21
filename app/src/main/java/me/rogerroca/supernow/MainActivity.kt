@@ -10,11 +10,13 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
+import dagger.hilt.android.AndroidEntryPoint
 import me.rogerroca.supernow.core.ui.navigation.AppNavBar
 import me.rogerroca.supernow.core.ui.navigation.AppNavHost
 import me.rogerroca.supernow.core.ui.navigation.Destination
 import me.rogerroca.supernow.core.ui.theme.AppTheme
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
