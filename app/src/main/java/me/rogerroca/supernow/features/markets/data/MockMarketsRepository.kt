@@ -2,8 +2,9 @@ package me.rogerroca.supernow.features.markets.data
 
 import me.rogerroca.supernow.core.ui.carrousels.CarouselCardModel
 import me.rogerroca.supernow.features.markets.model.Market
+import javax.inject.Inject
 
-object MockMarketsRepository: IMarketsRepository {
+class MockMarketsRepository @Inject constructor(): IMarketsRepository {
     private val markets: List<Market> = MarketMocks.markets
 
     private val marketOffers: List<CarouselCardModel> = MarketMocks.marketOffers

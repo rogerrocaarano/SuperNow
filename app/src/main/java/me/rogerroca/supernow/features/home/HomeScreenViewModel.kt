@@ -1,6 +1,7 @@
 package me.rogerroca.supernow.features.home
 
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -8,6 +9,7 @@ import me.rogerroca.supernow.core.ui.carrousels.CarouselCardModel
 import me.rogerroca.supernow.features.home.data.HomeMocks
 import me.rogerroca.supernow.features.markets.data.IMarketsRepository
 import me.rogerroca.supernow.features.markets.model.Market
+import javax.inject.Inject
 
 
 data class HomeScreenUiState(
@@ -16,7 +18,10 @@ data class HomeScreenUiState(
     val markets: List<Market>
 )
 
-class HomeScreenViewModel(marketsRepository: IMarketsRepository) : ViewModel() {
+@HiltViewModel
+class HomeScreenViewModel @Inject constructor(
+    private val marketsRepository: IMarketsRepository
+) : ViewModel() {
     private val _uiState = MutableStateFlow(
         HomeScreenUiState(
             userName = "User",
