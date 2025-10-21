@@ -16,7 +16,7 @@ import me.rogerroca.supernow.core.ui.theme.AppTypography
 fun ScreenHeader(
     modifier: Modifier = Modifier,
     header: String,
-    subHeader: String?,
+    subHeader: String? = null,
     userAvatar: String? = null
 ) {
     Row(

@@ -10,6 +10,7 @@ activityCompose = "1.8.0"
 composeBom = "2025.10.00"
 coil = "2.7.0"
 navigationCompose = "2.9.5"
+lorem = "2.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -29,9 +30,9 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts" }
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+lorem = { group = "com.thedeanda", name = "lorem", version.ref = "lorem" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
