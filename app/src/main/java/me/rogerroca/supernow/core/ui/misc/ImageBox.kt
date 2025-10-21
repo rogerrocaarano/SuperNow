@@ -2,6 +2,7 @@ package me.rogerroca.supernow.core.ui.misc
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -46,7 +47,7 @@ fun ImageBox(
             model = imageUrl,
             contentDescription = null,
             contentScale = ContentScale.Crop,
-            modifier = Modifier.size(imageSize)
+            modifier = Modifier.fillMaxSize()
         )
     }
 }
