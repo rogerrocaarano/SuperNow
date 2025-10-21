@@ -17,7 +17,7 @@ import me.rogerroca.supernow.core.ui.carrousels.CarouselType
 import me.rogerroca.supernow.core.ui.headers.ScreenHeader
 import me.rogerroca.supernow.core.ui.headers.SectionHeader
 import me.rogerroca.supernow.features.markets.MarketCard
-import me.rogerroca.supernow.features.markets.MarketModel
+import me.rogerroca.supernow.features.markets.model.Market
 
 @Composable
 fun HomeScreen(
@@ -59,7 +59,7 @@ fun HomeScreen(
 @Composable
 fun MarketsSection(
     modifier: Modifier = Modifier,
-    markets: List<MarketModel>
+    markets: List<Market>
 ) {
     markets.forEach { market ->
         MarketCard(
