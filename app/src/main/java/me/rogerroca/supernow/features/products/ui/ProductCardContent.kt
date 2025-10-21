@@ -62,45 +62,6 @@ fun ProductCardContent(
 }
 
 @Composable
-private fun ProductInfoColumn(
-    product: ProductCardModel,
-    onAddToCartClick: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(12.dp),
-        verticalArrangement = Arrangement.SpaceBetween
-    ) {
-        Text(
-            text = product.name,
-            style = MaterialTheme.typography.bodyMedium,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis
-        )
-
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            product.discountPercent?.let { percent ->
-                ProductDiscountBadge(percent)
-                Spacer(modifier = Modifier.width(8.dp))
-            }
-
-            product.discountedPrice?.let {
-                ProductOriginalPriceText(price = product.price)
-            }
-        }
-
-        ProductCurrentPriceText(price = product.discountedPrice ?: product.price)
-
-        AddToCartButton(onClick = onAddToCartClick)
-    }
-}
-
-@Composable
 private fun ProductOriginalPriceText(price: Double, modifier: Modifier = Modifier) {
     Text(
         text = "Bs. $price",
