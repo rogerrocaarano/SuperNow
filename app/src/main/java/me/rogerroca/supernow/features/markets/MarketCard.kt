@@ -48,7 +48,6 @@ fun MarketCard(
         ) {
             ImageBox(
                 imageUrl = model.imageUrl,
-                imageSize = imageSize,
                 backgroundColor = onPrimaryLight,
                 backgroundBrush = null
             )
