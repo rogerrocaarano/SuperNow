@@ -5,9 +5,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import me.rogerroca.supernow.R
 import me.rogerroca.supernow.core.ui.carrousels.Carousel
 import me.rogerroca.supernow.core.ui.carrousels.CarouselType
 import me.rogerroca.supernow.core.ui.headers.ScreenHeader
@@ -25,13 +27,13 @@ fun HomeScreen(
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         ScreenHeader(
-            header = "Hola, ${uiState.userName}!",
-            subHeader = "¿Abastecemos la casa?"
+            header = stringResource(R.string.home_greeting, uiState.userName),
+            subHeader = stringResource(R.string.home_subheader)
         )
 
         SectionHeader(
-            header = "Ahorrá",
-            subHeader = "Con las mejores ofertas"
+            header = stringResource(R.string.section_savings_header),
+            subHeader = stringResource(R.string.section_savings_subheader)
         )
 
         Carousel(
@@ -41,8 +43,8 @@ fun HomeScreen(
         )
 
         SectionHeader(
-            header = "Comprá fácil",
-            subHeader = "Todo el retail en un solo lugar"
+            header = stringResource(R.string.section_markets_header),
+            subHeader = stringResource(R.string.section_markets_subheader)
         )
 
         MarketsSection(

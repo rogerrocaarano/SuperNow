@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">SuperNow</string>
+
+    <!-- Home Screen -->
+    <string name="home_greeting">¡Hola, %1$s!</string>
+    <string name="home_subheader">¿Abastecemos la casa?</string>
+
+    <!-- Sections -->
+    <string name="section_savings_header">Ahorrá</string>
+    <string name="section_savings_subheader">Con las mejores ofertas</string>
+    <string name="section_markets_header">Comprá fácil</string>
+    <string name="section_markets_subheader">Todo el retail en un solo lugar</string>
 </resources>
