@@ -33,7 +33,6 @@ fun MarketCard(
     modifier: Modifier = Modifier,
     model: MarketModel,
     action: @Composable (() -> Unit)? = null,
-    imageSize: Dp = 56.dp
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
