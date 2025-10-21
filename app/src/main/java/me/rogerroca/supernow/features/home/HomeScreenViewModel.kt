@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import me.rogerroca.supernow.core.ui.carrousels.CarouselCardModel
 import me.rogerroca.supernow.features.home.data.HomeMocks
+import me.rogerroca.supernow.features.markets.data.IMarketsRepository
 import me.rogerroca.supernow.features.markets.model.Market
 
 
@@ -15,10 +16,13 @@ data class HomeScreenUiState(
     val markets: List<Market>
 )
 
-class HomeScreenViewModel : ViewModel() {
+class HomeScreenViewModel(marketsRepository: IMarketsRepository) : ViewModel() {
     private val _uiState = MutableStateFlow(
-        // TODO: Reemplazar con datos reales
-        HomeMocks.homeScreenUiState
+        HomeScreenUiState(
+            userName = "User",
+            offers = marketsRepository.getMarketOffers(),
+            markets = marketsRepository.getMarkets()
+        )
     )
     val uiState: StateFlow<HomeScreenUiState> = _uiState.asStateFlow()
 }
