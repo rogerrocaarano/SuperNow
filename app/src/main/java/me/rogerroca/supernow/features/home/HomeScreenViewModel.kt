@@ -7,30 +7,15 @@ import kotlinx.coroutines.flow.asStateFlow
 import me.rogerroca.supernow.core.ui.carrousels.CarouselCardModel
 
 
-// TODO: Eliminar este placeholder cuando se integre con datos reales
-const val placeholderImage = "https://picsum.photos/800/600"
-
 data class HomeScreenUiState(
-    val userName: String = "User",
-
-    // TODO: Remplazar con llamada real a un repositorio o fuente de datos
-    val offers: List<CarouselCardModel> = listOf(
-        CarouselCardModel(
-            id = "1",
-            imageUrl = placeholderImage,
-        ),
-        CarouselCardModel(
-            id = "2",
-            imageUrl = placeholderImage,
-        ),
-        CarouselCardModel(
-            id = "3",
-            imageUrl = placeholderImage,
-        )
-    )
+    val userName: String,
+    val offers: List<CarouselCardModel>
 )
 
 class HomeScreenViewModel : ViewModel() {
-    private val _uiState = MutableStateFlow(HomeScreenUiState())
+    private val _uiState = MutableStateFlow(
+        // TODO: Reemplazar con datos reales
+        homeScreenUiStateMockData
+    )
     val uiState: StateFlow<HomeScreenUiState> = _uiState.asStateFlow()
 }
