@@ -1,27 +1,29 @@
 package me.rogerroca.supernow.features.home
 
+import me.rogerroca.supernow.core.tools.mockImageUrl
+import me.rogerroca.supernow.core.tools.mockTextGen
 import me.rogerroca.supernow.core.ui.carrousels.CarouselCardModel
+import me.rogerroca.supernow.features.markets.MarketModel
 
 const val username = "User"
-
-const val mockImageUrl = "https://picsum.photos/800/600"
-
-val mockOffers = listOf(
+val mockOffers = (1..3).map { index ->
     CarouselCardModel(
-        id = "1",
-        imageUrl = mockImageUrl,
-    ),
-    CarouselCardModel(
-        id = "2",
-        imageUrl = mockImageUrl,
-    ),
-    CarouselCardModel(
-        id = "3",
-        imageUrl = mockImageUrl,
+        id = index.toString(),
+        imageUrl = mockImageUrl
     )
-)
+}
+
+val markets = List(4) {
+    MarketModel(
+        name = mockTextGen.getWords(2, 4),
+        address = mockTextGen.getWords(4, 8),
+        imageUrl = mockImageUrl,
+        score = 5
+    )
+}
 
 val homeScreenUiStateMockData = HomeScreenUiState(
     userName = username,
-    offers = mockOffers
+    offers = mockOffers,
+    markets = markets
 )
