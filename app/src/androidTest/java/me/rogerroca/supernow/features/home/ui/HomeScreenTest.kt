@@ -1,0 +1,29 @@
+package me.rogerroca.supernow.features.home.ui
+
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onNodeWithText
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
+
+/**
+ * Instrumented test for HomeScreen.
+ */
+@RunWith(AndroidJUnit4::class)
+class HomeScreenTest {
+    @get:Rule
+    val composeTestRule = createComposeRule()
+
+    @Test
+    fun homeScreen_displaysWelcomeText() {
+        composeTestRule.setContent {
+            HomeScreen()
+        }
+
+        composeTestRule
+            .onNodeWithText("Welcome to the Home Screen!")
+            .assertIsDisplayed()
+    }
+}
