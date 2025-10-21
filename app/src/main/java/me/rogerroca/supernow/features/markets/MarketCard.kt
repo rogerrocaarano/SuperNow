@@ -24,14 +24,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import me.rogerroca.supernow.core.ui.buttons.FavoriteButton
 import me.rogerroca.supernow.core.ui.misc.ImageBox
+import me.rogerroca.supernow.features.markets.model.Market
 import me.rogerroca.supernow.core.ui.theme.onBackgroundColorCard
 import me.rogerroca.supernow.core.ui.theme.onPrimaryLight
 
 @Composable
 fun MarketCard(
     modifier: Modifier = Modifier,
-    model: MarketModel,
-    action: @Composable (() -> Unit)? = null,
+    model: Market,
+    action: @Composable (() -> Unit)? = null
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -89,18 +90,25 @@ fun MarketCardPreview() {
         var isFavA by remember { mutableStateOf(true) }
         var isFavB by remember { mutableStateOf(false) }
 
-        val marketA = MarketModel(
+        val marketA = Market(
             name = "Local AAAAA",
             address = "Av. Principal #123ADFFGGDFHDFHGHFGJHJHJ",
             imageUrl = "https://sofia.com.bo/cdn/shop/files/Logos-marcas_27fb5342-061a-4b42-8586-237f677d7c87.png?v=1752000122&width=3200",
             score = 5
         )
 
-        val marketB = MarketModel(
+        val marketB = Market(
             name = "Local B",
             address = "Calle #45",
             imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6C2MCmrk6t0Ncdxx0CbqwFJDtaUJ_hcKjew&s",
             score = 4
+        )
+
+        val marketC = Market(
+            name = "Local C",
+            address = "Calle #3",
+            imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1upn4Zx_VRjRfenZby2gMhIEtLDPMu3d5xQ&s",
+            score = 3
         )
 
         MarketCard(
