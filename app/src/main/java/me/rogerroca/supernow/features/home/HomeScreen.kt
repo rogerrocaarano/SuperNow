@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -11,6 +12,8 @@ import me.rogerroca.supernow.core.ui.carrousels.Carousel
 import me.rogerroca.supernow.core.ui.carrousels.CarouselType
 import me.rogerroca.supernow.core.ui.headers.ScreenHeader
 import me.rogerroca.supernow.core.ui.headers.SectionHeader
+import me.rogerroca.supernow.features.markets.MarketCard
+import me.rogerroca.supernow.features.markets.MarketModel
 
 @Composable
 fun HomeScreen(
@@ -41,9 +44,23 @@ fun HomeScreen(
             header = "Comprá fácil",
             subHeader = "Todo el retail en un solo lugar"
         )
+
+        MarketsSection(
+            markets = uiState.markets
+        )
     }
+}
 
-
+@Composable
+fun MarketsSection(
+    modifier: Modifier = Modifier,
+    markets: List<MarketModel>
+) {
+    markets.forEach { market ->
+        MarketCard(
+            model = market
+        )
+    }
 }
 
 @Preview
