@@ -49,3 +49,13 @@ Para compilar y ejecutar la aplicación localmente, sigue estos pasos:
     * Sincroniza los archivos Gradle.
     * Asegúrate de que el servidor de Mockoon esté corriendo.
     * Ejecuta la aplicación en un emulador o dispositivo físico.
+
+## 🤝 Flujo de Contribución
+
+Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
+
+1.  Crea un **Issue** en GitHub describiendo la funcionalidad, el bug o la mejora.
+2.  Crea una rama local siguiendo la convención de nomenclatura: `tipo/#issue-descripcion-corta` (ej. `feature/#10-login-screen`).
+3.  Realiza tus cambios. Asegúrate de seguir la guía de [Commits Convencionales](https://www.conventionalcommits.org/en/v1.0.0/) para tus mensajes de commit.
+4.  Cuando el issue esté resuelto, crea un **Pull Request (PR)** apuntando a la rama `main`.
+5.  Espera la revisión y aprobación del PR.
