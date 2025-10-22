@@ -1,7 +1,7 @@
 package me.rogerroca.supernow.features.markets.model
 
 data class Market(
-    val id: String? = null,
+    val id: String,
     val name: String,
     val address: String? = null,
     val score: Int? = null,
