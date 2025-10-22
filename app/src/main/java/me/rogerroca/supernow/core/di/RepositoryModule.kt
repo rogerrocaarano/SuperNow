@@ -5,7 +5,7 @@ import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import me.rogerroca.supernow.features.markets.data.IMarketsRepository
-import me.rogerroca.supernow.features.markets.data.MockMarketsRepository
+import me.rogerroca.supernow.features.markets.data.MarketsRepositoryImpl
 import javax.inject.Singleton
 
 @Module
@@ -14,6 +14,6 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindMarketsRepository(
-        marketsRepository: MockMarketsRepository
+        marketsRepository: MarketsRepositoryImpl
     ): IMarketsRepository
 }
