@@ -25,8 +25,9 @@ object ApiClientModule {
         return HttpClient(Android) {
 
             defaultRequest {
-                host = "api.supernow.com"
-                url { URLProtocol.HTTPS }
+                host = "10.0.2.2"
+                port = 3001
+                url { URLProtocol.HTTP }
                 contentType(ContentType.Application.Json)
             }
 
