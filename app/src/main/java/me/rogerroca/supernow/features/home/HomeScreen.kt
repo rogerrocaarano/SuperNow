@@ -14,6 +14,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import me.rogerroca.supernow.R
 import me.rogerroca.supernow.core.ui.carrousels.Carousel
+import me.rogerroca.supernow.core.ui.carrousels.CarouselCardModel
 import me.rogerroca.supernow.core.ui.carrousels.CarouselType
 import me.rogerroca.supernow.core.ui.headers.ScreenHeader
 import me.rogerroca.supernow.core.ui.headers.SectionHeader
@@ -41,7 +42,12 @@ fun HomeScreen(
         )
 
         Carousel(
-            cards = uiState.offers,
+            cards = uiState.offers.map {
+                CarouselCardModel(
+                    id = it.id,
+                    imageUrl = it.imageUrl
+                )
+            },
             type = CarouselType.HERO,
             height = 220.dp
         )
