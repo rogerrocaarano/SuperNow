@@ -1,0 +1,186 @@
+{
+  "uuid": "e7c1c46a-4e74-4dfd-b1f2-02d8b06cc7ba",
+  "lastMigration": 33,
+  "name": "SuperNowApi",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "372ea076-693d-4964-9517-ec29882b4b42",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "ff74acc7-2f53-4764-9d66-80e1d560142a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "8768f3c8-15d8-40d0-86c7-c93755ed3d56",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "markets",
+      "responses": [
+        {
+          "uuid": "f3ac99b7-be54-4991-8785-898c2a856a8d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "oq6w",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "75587e93-e44e-4f7c-99d5-5cd471b1614e",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "offers/featured",
+      "responses": [
+        {
+          "uuid": "f6f5be70-1216-4d29-9c09-81abe96eac19",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "0ex8",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "372ea076-693d-4964-9517-ec29882b4b42"
+    },
+    {
+      "type": "route",
+      "uuid": "8768f3c8-15d8-40d0-86c7-c93755ed3d56"
+    },
+    {
+      "type": "route",
+      "uuid": "75587e93-e44e-4f7c-99d5-5cd471b1614e"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "8e401e9b-2147-4dc2-8d05-56a0dbd42745",
+      "id": "oq6w",
+      "name": "markets",
+      "documentation": "",
+      "value": "[\n  {\n    \"id\": \"market001\",\n    \"name\": \"Hipermaxi\",\n    \"address\": \"Segundo anillo, Av. Piraí\",\n    \"score\": 4,\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\n  },\n  {\n    \"id\": \"market002\",\n    \"name\": \"Sofía al Paso\",\n    \"address\": \"Segundo anillo, Av. Argentina\",\n    \"score\": 5,\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\n  },\n  {\n    \"id\": \"market003\",\n    \"name\": \"3B\",\n    \"address\": \"Cuarto Anillo, Polanco\",\n    \"score\": 4,\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\n  },\n  {\n    \"id\": \"market004\",\n    \"name\": \"Fidalga\",\n    \"address\": \"Tercer anillo, Av. Cristo Redentor\",\n    \"score\": 4,\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\n  }\n]"
+    },
+    {
+      "uuid": "f079bb39-5f29-44fd-b66d-bb3f802ead3f",
+      "id": "j074",
+      "name": "productCategories",
+      "documentation": "",
+      "value": "[\r\n  {\r\n    \"id\": \"{{faker 'string.uuid'}}\",\r\n    \"name\": \"Canasta familiar\",\r\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\r\n  },\r\n  {\r\n    \"id\": \"{{faker 'string.uuid'}}\",\r\n    \"name\": \"Frutas y verduras\",\r\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\r\n  },\r\n  {\r\n    \"id\": \"{{faker 'string.uuid'}}\",\r\n    \"name\": \"Bebidas\",\r\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\r\n  },\r\n  {\r\n    \"id\": \"{{faker 'string.uuid'}}\",\r\n    \"name\": \"Limpieza y hogar\",\r\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\r\n  },\r\n  {\r\n    \"id\": \"{{faker 'string.uuid'}}\",\r\n    \"name\": \"Higiene personal\",\r\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\r\n  },\r\n  {\r\n    \"id\": \"{{faker 'string.uuid'}}\",\r\n    \"name\": \"Bebé y familia\",\r\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\r\n  },\r\n  {\r\n    \"id\": \"{{faker 'string.uuid'}}\",\r\n    \"name\": \"Mascotas\",\r\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\r\n  },\r\n  {\r\n    \"id\": \"{{faker 'string.uuid'}}\",\r\n    \"name\": \"Otros esenciales\",\r\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\r\n  }\r\n]"
+    },
+    {
+      "uuid": "cf527873-1966-4ded-8aaa-0b2828dea0c5",
+      "id": "0ex8",
+      "name": "marketOffers",
+      "documentation": "",
+      "value": "[\n  {\n    \"id\": \"offer001\",\n    \"title\": \"offer1\",\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\n  },\n  {\n    \"id\": \"offer002\",\n    \"title\": \"offer2\",\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\n  },\n  {\n    \"id\": \"offer003\",\n    \"title\": \"offer3\",\n    \"imageUrl\": \"https://picsum.photos/800/600?random={{faker 'string.uuid'}}\"\n  }\n]"
+    }
+  ],
+  "callbacks": []
+}
