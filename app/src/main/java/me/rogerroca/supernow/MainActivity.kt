@@ -6,15 +6,19 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import me.rogerroca.supernow.core.ui.navigation.AppNavBar
 import me.rogerroca.supernow.core.ui.navigation.AppNavHost
 import me.rogerroca.supernow.core.ui.navigation.Destination
 import me.rogerroca.supernow.core.ui.theme.AppTheme
+import me.rogerroca.supernow.features.home.ui.HomeHeader
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -28,6 +32,15 @@ class MainActivity : ComponentActivity() {
             AppTheme {
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
+                    topBar = {
+                        val navBackStackEntry by navController.currentBackStackEntryAsState()
+                        val currentDestination = navBackStackEntry?.destination?.route
+
+                        when (currentDestination) {
+                            Destination.HOME.route -> HomeHeader(modifier = Modifier.statusBarsPadding())
+                            else -> {  /* No top bar */ }
+                        }
+                    },
                     bottomBar = {
                         AppNavBar(
                             navController = navController,

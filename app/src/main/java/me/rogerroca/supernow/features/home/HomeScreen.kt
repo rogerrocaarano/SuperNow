@@ -15,7 +15,6 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import me.rogerroca.supernow.R
 import me.rogerroca.supernow.core.ui.carrousels.Carousel
 import me.rogerroca.supernow.core.ui.carrousels.CarouselType
-import me.rogerroca.supernow.core.ui.headers.ScreenHeader
 import me.rogerroca.supernow.core.ui.headers.SectionHeader
 import me.rogerroca.supernow.features.markets.MarketCard
 import me.rogerroca.supernow.features.markets.model.Market
@@ -30,11 +29,6 @@ fun HomeScreen(
         modifier = Modifier.verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        ScreenHeader(
-            header = stringResource(R.string.home_greeting, uiState.userName),
-            subHeader = stringResource(R.string.home_subheader)
-        )
-
         SectionHeader(
             header = stringResource(R.string.section_savings_header),
             subHeader = stringResource(R.string.section_savings_subheader)
