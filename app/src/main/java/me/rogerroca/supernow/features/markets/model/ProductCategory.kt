@@ -3,9 +3,9 @@ package me.rogerroca.supernow.features.markets.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Offer(
+data class ProductCategory(
     val id: String,
     val marketId: String,
-    val title: String,
+    val name: String,
     val imageUrl: String
 )
