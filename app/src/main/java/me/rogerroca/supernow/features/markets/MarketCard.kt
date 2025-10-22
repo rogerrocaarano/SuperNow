@@ -91,6 +91,7 @@ fun MarketCardPreview() {
         var isFavB by remember { mutableStateOf(false) }
 
         val marketA = Market(
+            id = "1",
             name = "Local AAAAA",
             address = "Av. Principal #123ADFFGGDFHDFHGHFGJHJHJ",
             imageUrl = "https://sofia.com.bo/cdn/shop/files/Logos-marcas_27fb5342-061a-4b42-8586-237f677d7c87.png?v=1752000122&width=3200",
@@ -98,6 +99,7 @@ fun MarketCardPreview() {
         )
 
         val marketB = Market(
+            id = "2",
             name = "Local B",
             address = "Calle #45",
             imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6C2MCmrk6t0Ncdxx0CbqwFJDtaUJ_hcKjew&s",
@@ -105,6 +107,7 @@ fun MarketCardPreview() {
         )
 
         val marketC = Market(
+            id = "3",
             name = "Local C",
             address = "Calle #3",
             imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1upn4Zx_VRjRfenZby2gMhIEtLDPMu3d5xQ&s",
