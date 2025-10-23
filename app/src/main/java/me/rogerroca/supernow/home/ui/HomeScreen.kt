@@ -1,14 +1,19 @@
 package me.rogerroca.supernow.home.ui
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -17,8 +22,10 @@ import me.rogerroca.supernow.common.ui.carrousels.Carousel
 import me.rogerroca.supernow.common.ui.carrousels.CarouselCardModel
 import me.rogerroca.supernow.common.ui.carrousels.CarouselType
 import me.rogerroca.supernow.common.ui.headers.SectionHeader
-import me.rogerroca.supernow.markets.ui.components.MarketCard
 import me.rogerroca.supernow.markets.model.Market
+import me.rogerroca.supernow.markets.model.Offer
+import me.rogerroca.supernow.markets.ui.components.MarketCard
+
 
 @Composable
 fun HomeScreen(
@@ -26,8 +33,36 @@ fun HomeScreen(
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
+    Box(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        if (uiState.isLoading) {
+            CircularProgressIndicator(
+                modifier = Modifier.align(Alignment.Center)
+            )
+        } else if (uiState.error != null) {
+            Text(
+                text = uiState.error ?: "Error desconocido",
+                modifier = Modifier.align(Alignment.Center)
+            )
+        } else {
+            HomeScreenContent(
+                uiState = uiState
+            )
+        }
+    }
+}
+
+@Composable
+private fun HomeScreenContent(
+    uiState: HomeScreenUiState,
+    modifier: Modifier = Modifier
+) {
     Column(
-        modifier = Modifier.verticalScroll(rememberScrollState()),
+        modifier = modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         SectionHeader(
@@ -52,25 +87,25 @@ fun HomeScreen(
         )
 
         MarketsSection(
-            markets = uiState.markets
+            markets = uiState.markets,
+            modifier = Modifier.padding(horizontal = 16.dp)
         )
     }
 }
 
 @Composable
-fun MarketsSection(
-    modifier: Modifier = Modifier,
-    markets: List<Market>
+private fun MarketsSection(
+    markets: List<Market>,
+    modifier: Modifier = Modifier
 ) {
-    markets.forEach { market ->
-        MarketCard(
-            model = market
-        )
+    Column(
+        modifier = modifier, // Usamos el modifier pasado
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        markets.forEach { market ->
+            MarketCard(
+                model = market
+            )
+        }
     }
-}
-
-@Preview
-@Composable
-fun HomeScreenPreview() {
-    HomeScreen()
 }
