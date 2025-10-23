@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.markets.model
+package me.rogerroca.supernow.markets.model
 
 import kotlinx.serialization.Serializable
 

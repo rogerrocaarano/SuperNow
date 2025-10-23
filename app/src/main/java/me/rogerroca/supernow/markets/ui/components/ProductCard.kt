@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.markets.ui.components
+package me.rogerroca.supernow.markets.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -36,7 +36,7 @@ import me.rogerroca.supernow.core.ui.theme.buttons.squareMediumIconButtonModifie
 import me.rogerroca.supernow.core.ui.theme.buttons.squareMediumIconButtonShape
 import me.rogerroca.supernow.core.ui.theme.errorLight
 import me.rogerroca.supernow.core.ui.theme.onErrorLight
-import me.rogerroca.supernow.features.markets.model.Product
+import me.rogerroca.supernow.markets.model.Product
 
 @Composable
 fun ProductCard(

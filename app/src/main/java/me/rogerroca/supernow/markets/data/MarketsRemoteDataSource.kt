@@ -1,12 +1,12 @@
-package me.rogerroca.supernow.features.markets.data
+package me.rogerroca.supernow.markets.data
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
-import me.rogerroca.supernow.features.markets.model.Market
-import me.rogerroca.supernow.features.markets.model.Offer
-import me.rogerroca.supernow.features.markets.model.Product
-import me.rogerroca.supernow.features.markets.model.ProductCategory
+import me.rogerroca.supernow.markets.model.Market
+import me.rogerroca.supernow.markets.model.Offer
+import me.rogerroca.supernow.markets.model.Product
+import me.rogerroca.supernow.markets.model.ProductCategory
 import javax.inject.Inject
 
 class MarketsRemoteDataSource @Inject constructor(private val client: HttpClient) {

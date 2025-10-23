@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.markets.ui
+package me.rogerroca.supernow.markets.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,9 +12,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import me.rogerroca.supernow.core.ui.headers.SectionHeader
-import me.rogerroca.supernow.features.markets.model.Market
-import me.rogerroca.supernow.features.markets.model.Product
-import me.rogerroca.supernow.features.markets.ui.components.ProductCard
+import me.rogerroca.supernow.markets.model.Market
+import me.rogerroca.supernow.markets.model.Product
+import me.rogerroca.supernow.markets.ui.components.ProductCard
 
 @Composable
 fun MarketsScreen(

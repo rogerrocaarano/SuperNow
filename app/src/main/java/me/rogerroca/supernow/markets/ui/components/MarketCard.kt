@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.markets.ui.components
+package me.rogerroca.supernow.markets.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -24,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import me.rogerroca.supernow.core.ui.buttons.FavoriteButton
 import me.rogerroca.supernow.core.ui.misc.ImageBox
-import me.rogerroca.supernow.features.markets.model.Market
+import me.rogerroca.supernow.markets.model.Market
 import me.rogerroca.supernow.core.ui.theme.onBackgroundColorCard
 import me.rogerroca.supernow.core.ui.theme.onPrimaryLight
 

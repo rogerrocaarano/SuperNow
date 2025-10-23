@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.markets.ui.components
+package me.rogerroca.supernow.markets.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

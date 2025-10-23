@@ -7,9 +7,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import me.rogerroca.supernow.features.markets.data.IMarketsRepository
-import me.rogerroca.supernow.features.markets.model.Market
-import me.rogerroca.supernow.features.markets.model.Offer
+import me.rogerroca.supernow.markets.data.IMarketsRepository
+import me.rogerroca.supernow.markets.model.Market
+import me.rogerroca.supernow.markets.model.Offer
 import javax.inject.Inject
 
 

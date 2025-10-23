@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.markets.ui
+package me.rogerroca.supernow.markets.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,9 +7,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import me.rogerroca.supernow.features.markets.data.IMarketsRepository
-import me.rogerroca.supernow.features.markets.model.Market
-import me.rogerroca.supernow.features.markets.model.Product
+import me.rogerroca.supernow.markets.data.IMarketsRepository
+import me.rogerroca.supernow.markets.model.Market
+import me.rogerroca.supernow.markets.model.Product
 import javax.inject.Inject
 
 

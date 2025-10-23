@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.markets.ui.components
+package me.rogerroca.supernow.markets.ui.components
 
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon

@@ -4,8 +4,8 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import me.rogerroca.supernow.features.markets.data.IMarketsRepository
-import me.rogerroca.supernow.features.markets.data.MarketsRepositoryImpl
+import me.rogerroca.supernow.markets.data.IMarketsRepository
+import me.rogerroca.supernow.markets.data.MarketsRepositoryImpl
 import javax.inject.Singleton
 
 @Module
