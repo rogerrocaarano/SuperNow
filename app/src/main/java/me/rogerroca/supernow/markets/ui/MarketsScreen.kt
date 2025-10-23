@@ -24,11 +24,10 @@ fun MarketsScreen(
         modifier = Modifier.verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        val markets by viewModel.markets.collectAsStateWithLifecycle()
-        val featuredProducts by viewModel.featuredProducts.collectAsStateWithLifecycle()
+        val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
-        markets.forEach { market ->
-            val productsForMarket = featuredProducts.filter { it.marketId == market.id }
+        uiState.markets.forEach { market ->
+            val productsForMarket = uiState.featuredProducts.filter { it.marketId == market.id }
             MarketFeaturedProductsSection(
                 market = market,
                 products = productsForMarket
