@@ -7,8 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import me.rogerroca.supernow.home.ui.HomeScreen
 import me.rogerroca.supernow.markets.ui.MarketsScreen
-import me.rogerroca.supernow.features.orders.ui.OrdersScreen
-import me.rogerroca.supernow.features.products.ui.FavoriteProductsScreen
+import me.rogerroca.supernow.orders.ui.OrdersScreen
+import me.rogerroca.supernow.products.ui.FavoriteProductsScreen
 
 @Composable
 fun AppNavHost(

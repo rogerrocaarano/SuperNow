@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.products.ui
+package me.rogerroca.supernow.orders.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
@@ -6,14 +6,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun FavoriteProductsScreen() {
+fun OrdersScreen() {
     Column {
-        Text("Welcome to the Favorite Products Screen!")
+        Text("Welcome to the Orders Screen!")
     }
 }
 
 @Preview
 @Composable
-fun FavoriteProductsScreenPreview() {
-    FavoriteProductsScreen()
+fun OrdersScreenPreview() {
+    OrdersScreen()
 }
