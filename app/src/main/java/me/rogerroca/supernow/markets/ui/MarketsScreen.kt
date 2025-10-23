@@ -2,7 +2,9 @@ package me.rogerroca.supernow.markets.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
@@ -37,14 +39,18 @@ fun MarketsScreen(
 }
 
 @Composable
-fun MarketFeaturedProductsSection(market: Market, products: List<Product>) {
+private fun MarketFeaturedProductsSection(market: Market, products: List<Product>) {
     Column {
         SectionHeader(
             header = market.name
         )
-        Row {
-            products.forEach {
+
+        LazyRow(
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            items(items = products) {
                 ProductCard(
+                    modifier = Modifier.width(200.dp),
                     model = it
                 )
             }
