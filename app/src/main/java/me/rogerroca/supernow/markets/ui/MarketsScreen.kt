@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import me.rogerroca.supernow.core.ui.headers.SectionHeader
+import me.rogerroca.supernow.common.ui.headers.SectionHeader
 import me.rogerroca.supernow.markets.model.Market
 import me.rogerroca.supernow.markets.model.Product
 import me.rogerroca.supernow.markets.ui.components.ProductCard

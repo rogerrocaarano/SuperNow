@@ -15,7 +15,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import me.rogerroca.supernow.R
-import me.rogerroca.supernow.core.ui.theme.AppTypography
+import me.rogerroca.supernow.common.ui.theme.AppTypography
 
 @Composable
 fun InfoColumn(

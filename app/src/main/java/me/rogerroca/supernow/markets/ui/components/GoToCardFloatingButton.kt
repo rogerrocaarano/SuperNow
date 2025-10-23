@@ -9,8 +9,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import me.rogerroca.supernow.R
-import me.rogerroca.supernow.core.ui.theme.AppTheme
-import me.rogerroca.supernow.core.ui.theme.tertiaryLight
+import me.rogerroca.supernow.common.ui.theme.AppTheme
+import me.rogerroca.supernow.common.ui.theme.tertiaryLight
 
 @Composable
 fun GoToCardFloatingButton(

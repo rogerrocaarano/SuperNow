@@ -22,11 +22,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import me.rogerroca.supernow.core.ui.buttons.FavoriteButton
-import me.rogerroca.supernow.core.ui.misc.ImageBox
+import me.rogerroca.supernow.common.ui.buttons.FavoriteButton
+import me.rogerroca.supernow.common.ui.misc.ImageBox
 import me.rogerroca.supernow.markets.model.Market
-import me.rogerroca.supernow.core.ui.theme.onBackgroundColorCard
-import me.rogerroca.supernow.core.ui.theme.onPrimaryLight
+import me.rogerroca.supernow.common.ui.theme.onBackgroundColorCard
+import me.rogerroca.supernow.common.ui.theme.onPrimaryLight
 
 @Composable
 fun MarketCard(

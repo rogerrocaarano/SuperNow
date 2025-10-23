@@ -22,20 +22,20 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import me.rogerroca.supernow.R
-import me.rogerroca.supernow.core.tools.mockTextGen
-import me.rogerroca.supernow.core.ui.buttons.AppIconButton
-import me.rogerroca.supernow.core.ui.buttons.AppOutlinedIconButton
-import me.rogerroca.supernow.core.ui.buttons.PrimaryButton
-import me.rogerroca.supernow.core.ui.misc.AsyncImageWithOverlay
-import me.rogerroca.supernow.core.ui.textfields.NumberTextField
-import me.rogerroca.supernow.core.ui.theme.AppTheme
-import me.rogerroca.supernow.core.ui.theme.AppTypography
-import me.rogerroca.supernow.core.ui.theme.buttons.narrowDefaultIconButtonModifier
-import me.rogerroca.supernow.core.ui.theme.buttons.primaryIconButtonColors
-import me.rogerroca.supernow.core.ui.theme.buttons.squareMediumIconButtonModifier
-import me.rogerroca.supernow.core.ui.theme.buttons.squareMediumIconButtonShape
-import me.rogerroca.supernow.core.ui.theme.errorLight
-import me.rogerroca.supernow.core.ui.theme.onErrorLight
+import me.rogerroca.supernow.common.tools.mockTextGen
+import me.rogerroca.supernow.common.ui.buttons.AppIconButton
+import me.rogerroca.supernow.common.ui.buttons.AppOutlinedIconButton
+import me.rogerroca.supernow.common.ui.buttons.PrimaryButton
+import me.rogerroca.supernow.common.ui.misc.AsyncImageWithOverlay
+import me.rogerroca.supernow.common.ui.textfields.NumberTextField
+import me.rogerroca.supernow.common.ui.theme.AppTheme
+import me.rogerroca.supernow.common.ui.theme.AppTypography
+import me.rogerroca.supernow.common.ui.theme.buttons.narrowDefaultIconButtonModifier
+import me.rogerroca.supernow.common.ui.theme.buttons.primaryIconButtonColors
+import me.rogerroca.supernow.common.ui.theme.buttons.squareMediumIconButtonModifier
+import me.rogerroca.supernow.common.ui.theme.buttons.squareMediumIconButtonShape
+import me.rogerroca.supernow.common.ui.theme.errorLight
+import me.rogerroca.supernow.common.ui.theme.onErrorLight
 import me.rogerroca.supernow.markets.model.Product
 
 @Composable

@@ -6,7 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import me.rogerroca.supernow.R
-import me.rogerroca.supernow.core.ui.headers.ScreenHeader
+import me.rogerroca.supernow.common.ui.headers.ScreenHeader
 
 @Composable
 fun HomeHeader(modifier: Modifier = Modifier) {
