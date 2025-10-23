@@ -25,12 +25,12 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import me.rogerroca.supernow.core.ui.buttons.FavoriteButton
 import me.rogerroca.supernow.core.ui.misc.ImageBox
+import me.rogerroca.supernow.features.products.ui.model.Product
 
 @Composable
 fun ProductCard(
-    product: ProductCardModel,
+    product: Product,
     onFavoriteClick: () -> Unit,
-    onAddToCartClick: () -> Unit,
     modifier: Modifier = Modifier,
     imageHeight: Dp = 180.dp,
 ) {
@@ -71,7 +71,6 @@ fun ProductCard(
             ProductCardContent(
                 product = product,
                 discountedPrice = product.discountedPrice,
-                onAddToCartClick = onAddToCartClick,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(12.dp)
@@ -85,7 +84,7 @@ fun ProductCard(
 fun ProductCardPreview() {
     var isFav by remember { mutableStateOf(false) }
 
-    val product = ProductCardModel(
+    val product = Product(
         imageUrl = "https://supermercado.eroski.es//images/25501974.jpg",
         name = "Producto A",
         price = 120.0,
@@ -96,7 +95,6 @@ fun ProductCardPreview() {
 
     ProductCard(
         product = product,
-        onFavoriteClick = { isFav = !isFav },
-        onAddToCartClick = {}
+        onFavoriteClick = { isFav = !isFav }
     )
 }
