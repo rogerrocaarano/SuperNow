@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.home.ui
+package me.rogerroca.supernow.home.ui.components
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable

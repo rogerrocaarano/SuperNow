@@ -18,7 +18,7 @@ import me.rogerroca.supernow.core.ui.navigation.AppNavBar
 import me.rogerroca.supernow.core.ui.navigation.AppNavHost
 import me.rogerroca.supernow.core.ui.navigation.Destination
 import me.rogerroca.supernow.core.ui.theme.AppTheme
-import me.rogerroca.supernow.features.home.ui.HomeHeader
+import me.rogerroca.supernow.home.ui.components.HomeHeader
 import me.rogerroca.supernow.features.markets.ui.MarketsHeader
 
 @AndroidEntryPoint

@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.home
+package me.rogerroca.supernow.home.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

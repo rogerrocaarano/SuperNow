@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.home
+package me.rogerroca.supernow.home.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

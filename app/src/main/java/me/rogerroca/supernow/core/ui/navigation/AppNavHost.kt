@@ -5,7 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import me.rogerroca.supernow.features.home.HomeScreen
+import me.rogerroca.supernow.home.ui.HomeScreen
 import me.rogerroca.supernow.features.markets.ui.MarketsScreen
 import me.rogerroca.supernow.features.orders.ui.OrdersScreen
 import me.rogerroca.supernow.features.products.ui.FavoriteProductsScreen
