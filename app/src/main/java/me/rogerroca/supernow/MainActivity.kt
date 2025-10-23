@@ -19,6 +19,7 @@ import me.rogerroca.supernow.core.ui.navigation.AppNavHost
 import me.rogerroca.supernow.core.ui.navigation.Destination
 import me.rogerroca.supernow.core.ui.theme.AppTheme
 import me.rogerroca.supernow.features.home.ui.HomeHeader
+import me.rogerroca.supernow.features.markets.ui.MarketsHeader
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -36,8 +37,10 @@ class MainActivity : ComponentActivity() {
                         val navBackStackEntry by navController.currentBackStackEntryAsState()
                         val currentDestination = navBackStackEntry?.destination?.route
 
+                        val statusBarPaddingModifier = Modifier.statusBarsPadding()
                         when (currentDestination) {
-                            Destination.HOME.route -> HomeHeader(modifier = Modifier.statusBarsPadding())
+                            Destination.HOME.route -> HomeHeader(statusBarPaddingModifier)
+                            Destination.PRODUCTS.route -> MarketsHeader(statusBarPaddingModifier)
                             else -> {  /* No top bar */ }
                         }
                     },
