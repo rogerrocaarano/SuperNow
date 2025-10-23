@@ -14,8 +14,6 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import me.rogerroca.supernow.core.ui.headers.SectionHeader
 import me.rogerroca.supernow.features.markets.model.Market
 import me.rogerroca.supernow.features.markets.model.Product
-import me.rogerroca.supernow.features.products.ui.ProductCard
-import me.rogerroca.supernow.features.products.ui.ProductCardModel
 
 @Composable
 fun MarketsScreen(
@@ -47,14 +45,7 @@ fun MarketFeaturedProductsSection(market: Market, products: List<Product>) {
         Row {
             products.forEach {
                 ProductCard(
-                    product = ProductCardModel(
-                        name = it.name,
-                        imageUrl = it.imageUrl,
-                        price = it.price,
-                        isFavorite = it.isFavorite
-                    ),
-                    onAddToCartClick = { /* TODO */ },
-                    onFavoriteClick = { /* TODO */ }
+                    model = it
                 )
             }
         }
