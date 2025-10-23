@@ -15,7 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import me.rogerroca.supernow.R
 import me.rogerroca.supernow.core.ui.theme.AppTheme
-import me.rogerroca.supernow.core.ui.theme.AppTypography
+import me.rogerroca.supernow.core.ui.theme.buttons.primaryButtonColors
 
 @Composable
 fun PrimaryButton(
@@ -26,6 +26,7 @@ fun PrimaryButton(
     onClick: () -> Unit
 ) {
     Button(
+        colors = primaryButtonColors,
         onClick = onClick,
         modifier = modifier
     ) {
