@@ -3,9 +3,8 @@ package me.rogerroca.supernow.core.ui.buttons
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
@@ -22,18 +21,15 @@ import me.rogerroca.supernow.core.ui.theme.primaryContainerLight
 fun AddToCartButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
     Button(
         onClick = onClick,
+        modifier = modifier.wrapContentWidth(),
         colors = ButtonDefaults.buttonColors(
             containerColor = primaryContainerLight,
             contentColor = onPrimaryContainerLight
-        ),
-        modifier = modifier
-            .fillMaxWidth()
-            .height(38.dp)
+        )
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center,
-            modifier = Modifier.fillMaxWidth()
+            horizontalArrangement = Arrangement.Center
         ) {
             Text(
                 text = "+",
