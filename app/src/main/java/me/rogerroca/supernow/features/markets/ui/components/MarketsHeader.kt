@@ -1,4 +1,4 @@
-package me.rogerroca.supernow.features.markets.ui
+package me.rogerroca.supernow.features.markets.ui.components
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable

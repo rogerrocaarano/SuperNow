@@ -14,6 +14,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import me.rogerroca.supernow.core.ui.headers.SectionHeader
 import me.rogerroca.supernow.features.markets.model.Market
 import me.rogerroca.supernow.features.markets.model.Product
+import me.rogerroca.supernow.features.markets.ui.components.ProductCard
 
 @Composable
 fun MarketsScreen(

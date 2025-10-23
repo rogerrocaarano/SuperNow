@@ -17,7 +17,7 @@ import me.rogerroca.supernow.core.ui.carrousels.Carousel
 import me.rogerroca.supernow.core.ui.carrousels.CarouselCardModel
 import me.rogerroca.supernow.core.ui.carrousels.CarouselType
 import me.rogerroca.supernow.core.ui.headers.SectionHeader
-import me.rogerroca.supernow.features.markets.MarketCard
+import me.rogerroca.supernow.features.markets.ui.components.MarketCard
 import me.rogerroca.supernow.features.markets.model.Market
 
 @Composable

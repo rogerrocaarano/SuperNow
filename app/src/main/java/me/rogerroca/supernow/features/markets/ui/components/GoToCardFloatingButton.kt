@@ -1,7 +1,6 @@
-package me.rogerroca.supernow.features.markets.ui
+package me.rogerroca.supernow.features.markets.ui.components
 
 import androidx.compose.material3.ExtendedFloatingActionButton
-import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
